@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import rollD20 from './components/d20';
 
 const App = () => {
@@ -17,9 +17,14 @@ const App = () => {
 
   return (
     <View style={styles.container}>
+      <Image
+        source={require('./assets/d20.jpg')}
+        style={{ width: 200, height: 200, padding:25, margin:30, }}
+      />
       <Text style={styles.title}>
-        FAÇA SUA JOGADA
+              FAÇA SUA JOGADA
       </Text>
+     
       <TouchableOpacity onPress={handlePress} style={styles.button}>
         <Text style={styles.buttonText}>Rodar D20</Text>
       </TouchableOpacity>
